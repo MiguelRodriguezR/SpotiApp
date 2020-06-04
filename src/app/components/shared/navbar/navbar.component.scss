@@ -1,0 +1,46 @@
+@import "../../../../colors";
+
+
+.active-link {
+  border-bottom-color: $primary-color !important;
+}
+
+.navbar-nav {
+  display: flex;
+}
+
+.navbar {
+  display: flex;
+  background-color: $contrast-color;
+  padding: 5px;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      margin-right: 10px;
+    }
+
+  }
+
+}
+
+.nav-item {
+  border-bottom: solid 2px $contrast-color;
+  margin-left: 15px;
+  padding: 5px;
+
+  .nav-link {
+    color: $text-color;
+
+    &:hover {
+      color: $hover-text-color;
+    }
+  }
+}
+
+
+
+

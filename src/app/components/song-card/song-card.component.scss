@@ -1,0 +1,33 @@
+@import "../../../colors";
+
+.card {
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: $contrast-color;
+  .top {
+    img {
+      width: 100%;
+    }
+  }
+
+  .bottom {
+    padding: 20px;
+    color: $text-color;
+
+    .artists {
+      display: flex;
+      flex-direction: row;
+
+      .artist {
+        width: auto;
+        padding: 7px;
+        margin: 3px;
+        border-radius: 20px;
+        background-color: $primary-color;
+        color: black;
+      }
+    }
+
+  }
+}

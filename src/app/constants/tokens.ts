@@ -1,0 +1,1 @@
+export const SPOTIFY_TOKEN = "BQDQiX5wyBacX_4BswDqoGp75p61ztEvO6HmknHNX3_m_6c-hXKDwe3mxqB2E2O3tqsmizOoJz9aawXemZo";

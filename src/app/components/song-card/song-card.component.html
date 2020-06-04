@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="top">
+    <img [src]="song.images[0].url" alt="">
+  </div>
+  <div class="bottom">
+    <h3 class="title">{{song.name}}</h3>
+    <div class="artists">
+      <div class="artist" *ngFor="let artista of song.artists">{{artista.name}}</div>
+    </div>
+  </div>
+</div>
