@@ -1,1 +1,31 @@
-<p>artist works!</p>
+<app-loading *ngIf="!artist"></app-loading>
+<div class="artist-big-container animated fadeIn" *ngIf="artist">
+  <div class="top">
+    <div class="img-container img-circle">
+      <img [src]=" artist.images | noimage" class="" alt="">
+    </div>
+    <a [href]="artist.external_urls.spotify" target="_blank"><h1>{{artist.name}}</h1></a>
+  </div>
+  <div class="mid">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Picture</th>
+        <th>Album</th>
+        <th>Track</th>
+        <th>Preview</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let track of topTacks">
+        <td class="image-td"><div class="track-image"><img [src]="track.album.images | noimage" alt=""></div></td>
+        <td>{{track.album.name}}</td>
+        <td>{{track.name}}</td>
+        <td>
+          <iframe [src]="('https://open.spotify.com/embed/track/' + track.id) | safe" width="300" height="80"
+                  frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

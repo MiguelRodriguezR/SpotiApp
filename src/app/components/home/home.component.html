@@ -1,3 +1,4 @@
+<app-loading *ngIf="service.loading"></app-loading>
 <div class="home-big-container" #masonry>
   <div class="col" *ngFor="let col of columns">
     <app-song-card class="home-card-item" *ngFor="let song of col" [song]="song"></app-song-card>

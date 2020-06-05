@@ -10,6 +10,9 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import {HttpClientModule} from '@angular/common/http';
 import {SongCardComponent} from './components/song-card/song-card.component';
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { LoadingComponent } from './components/shared/loading/loading.component';
+import {SafePipe} from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import {SongCardComponent} from './components/song-card/song-card.component';
     ArtistComponent,
     NavbarComponent,
     NotFoundComponent,
-    SongCardComponent
+    SongCardComponent,
+    NoimagePipe,
+    SafePipe,
+    LoadingComponent
   ],
   imports: [
     HttpClientModule,

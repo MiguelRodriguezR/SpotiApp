@@ -1,1 +1,11 @@
-<p>search works!</p>
+<div class="input-container">
+  <div class="input-col">
+    <input type="text" #termino (keyup)="buscar(termino.value)" class="form-control" placeholder="Search Artist...">
+  </div>
+</div>
+<app-loading *ngIf="service.loading"></app-loading>
+<div class="search-big-container" #masonry>
+  <div class="col" *ngFor="let col of columns">
+    <app-song-card class="home-card-item" *ngFor="let song of col" [song]="song"></app-song-card>
+  </div>
+</div>
