@@ -21,4 +21,4 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Author
 
-[Miguel Angel Rodriguez](migu.es) - Front-End developer
+[Miguel Angel Rodriguez](http://migu.es) - Front-End developer
