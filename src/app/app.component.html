@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container">
+<div class="container" *ngIf="service.authLoaded">
   <router-outlet></router-outlet>
 </div>
+<app-loading *ngIf="!service.authLoaded"></app-loading>

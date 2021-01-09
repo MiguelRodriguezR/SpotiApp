@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-import {SPOTIFY_TOKEN} from '../constants/tokens';
 import {map} from 'rxjs/internal/operators';
+import {AuthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root',
@@ -12,15 +12,14 @@ export class SpotifyService {
   api = 'https://api.spotify.com/v1/';
   loading = false;
 
-  constructor(private http: HttpClient) {
-    this.token = SPOTIFY_TOKEN;
+  constructor(private authService: AuthService, private http: HttpClient) {}
+
+  getQ(query) {
+    this.token = this.authService.SPOTIFY_TOKEN;
     const headerObj = new HttpHeaders({
       Authorization: `Bearer ${this.token}`
     });
     this.headers = {headers: headerObj};
-  }
-
-  getQ(query) {
     this.loading = true;
     return this.http.get(`${this.api}${query}`, this.headers);
   }
